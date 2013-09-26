@@ -2,6 +2,7 @@ module Polterheist
   module Screenshot
     def self.included(base)
       require 'launchy'
+      require 'fileutils'
     end
 
     def ss

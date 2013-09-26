@@ -1,6 +1,6 @@
 # Polterheist
 
-TODO: Write a gem description
+Example of using Poltergeist & PhantomJS to web-scrape an MLS site.
 
 ## Installation
 
