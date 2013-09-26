@@ -8,10 +8,17 @@ module Polterheist
       visit('/m/')
       input_box = find(".SearchContainer > input[rel='searchField']")
       input_box.set address
-      # fill_in "txtSearchBox", :with => address
-      binding.pry
-      #all(:xpath, "//li[@class='g']/h3/a").each { |a| puts a[:href] }
-
+      click_on "Search"
+      print "Waiting 5 seconds for slow client javascript stuff to happen."
+      5.times {sleep 1 ; print "."} 
+      if page.has_css?(".mainImage")
+        puts "Found a house at #{address}"
+      elsif page.has_text? "No Homes Found"
+        puts "Did not find any houses at #{address}"
+      else
+        puts "No idea. Did I not wait long enough?"
+      end
+      page.body
     end
   end
 end
