@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["keyvanfatehi@gmail.com"]
   spec.description   = %q{Poltergeist wrapper}
   spec.summary       = %q{Poltergeist wrapper}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/keyvanfatehi/polterheist"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
